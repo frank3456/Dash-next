@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NexaDash - Professional Analytics Dashboard</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS file in the same folder -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loader Spinner -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <h1>NexaDash</h1>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0021 12.79z"></path>
+      </svg>
+    </button>
+    <p class="dashboard-subtitle">
+  Gain clear insights into your data with a clean, responsive analytics dashboard.
+</p>
+<a href="mailto:https://tolu-solution-dev.vercel.app/" class="cta-button">🚀 Hire Me for Dashboard Projects</a>
+  </header>
+
+  <!-- ✅ Animated Counters Section (only one) -->
+  <section class="counters-section">
+    <div class="counter-card">
+      <div class="counter-number" data-target="1500">0</div>
+      <p>Total Sales</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="850">0</div>
+      <p>Active Users</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="3500">0</div>
+      <p>Website Visits</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="72">0%</div>
+      <p>Conversion Rate</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="chart-section dashboard-card">
+      <h2>Monthly Sales Performance</h2>
+      <canvas id="salesChart" width="400" height="200"></canvas>
+    </section>
+
+    <section class="chart-section dashboard-card">
+      <h2>Website Traffic Overview</h2>
+      <canvas id="visitorsChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <!-- Optional additional counters for variety -->
+  <section class="counters-section">
+    <div class="counter-card">
+      <div class="counter-number" data-target="1200">0</div>
+      <p>Active Users</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="4500">0</div>
+      <p>Page Views</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="550000">0</div>
+      <p>Revenue (₦)</p>
+    </div>
+    <div class="counter-card">
+      <div class="counter-number" data-target="89">0</div>
+      <p>Projects Completed</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Tolu Solution | Built with dedication by Tolu Ademuwagun</p>
+  </footer>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Loader Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
